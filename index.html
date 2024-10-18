@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Monitoring System</h1>
+
+        <!-- Form for user to input cities and set threshold -->
+        <form id="settingsForm">
+            <label for="cities">Enter City Names (comma separated):</label>
+            <input type="text" id="cities" name="cities" placeholder="e.g., Delhi, Mumbai" required>
+            
+            <label for="threshold">Set Temperature Threshold (°C):</label>
+            <input type="number" id="threshold" name="threshold" placeholder="e.g., 35" required>
+
+            <button type="submit">Start Monitoring</button>
+        </form>
+
+        <!-- Weather Data Output -->
+        <div id="weather-data">
+            <h2>Weather Information</h2>
+            <div id="city-data"></div> <!-- Weather details will be inserted here -->
+        </div>
+
+        <!-- Display alerts -->
+        <div id="alerts">
+            <h2>Alerts</h2>
+            <ul id="alert-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
